@@ -50,6 +50,24 @@ users.save().then( (doc)=>{
 
 });
 
+
+app.get('/users',(req,res)=>{
+
+    IctUsers.find().then( (userdata) =>{
+res.send(userdata)
+    }) 
+
+
+});
+
+
+
+
+
+
+
+
+
 app.listen(3000,()=>{
     console.log('started')
 });
